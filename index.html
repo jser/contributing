@@ -10,23 +10,59 @@
     <link rel="stylesheet" href="app/css/style.css">
 </head>
 <body>
+<div class="container" ng-controller="jserController">
+    <div class="section-title">
+        <h1><a href="https://github.com/azu/jser.info/">JSer.info</a> Contributing form</h1>
+    </div>
+    <div class="row">
+        <div class="col-md-4">
+            <h2>1. サイト情報を入力</h2>
+
+            <p>関連サイト以外は大体必須項目となっています。</p>
+
+            <p>説明文はMarkdown又はHTMLが利用できます。</p>
+
+            <p>関連サイトは複数入力出来ますが、説明文を使っても問題ないです</p>
+        </div>
+        <div class="col-md-4">
+            <h2>2. JSONをコピーする</h2>
+
+            <p>右側に表示されているJSON文字列をコピーしましょう。</p>
+
+            <p>データはJSONとして追記していくため、この文字列をpull requestで追加します。</p>
+        </div>
+        <div class="col-md-4">
+            <h2>3. Pull request</h2>
+
+            <p><a href="https://github.com/azu/jser.info">JSer.infoリポジトリ</a>の<a
+                    href="https://github.com/azu/jser.info/edit/gh-pages/data/{{today | date:'yyyy/MM'}}/index.json">{{today
+                | date:'yyyy/MM'}}/index.json</a>ファイル末尾に
+                JSON文字列を追記し、pull requestしましょう。
+            </p>
+
+            <p>
+                 <a href="https://github.com/azu/jser.info/edit/gh-pages/data/{{today | date:'yyyy/MM'}}/index.json"
+                   class="btn btn-success"><i class="glyphicon glyphicon-edit"></i>Pull Request</a>
+            </p>
+        </div>
+    </div>
+</div>
 <div class="container">
     <div class="row" ng-controller="dataFormController">
-        <h1><a href="https://github.com/azu/jser.info/">JSer.info</a> Contributing form</h1>
-
         <div class="col-md-8">
             <form role="form">
                 <div class="form-group">
                     <label class="control-label" for="form-title">タイトル: </label>
-                    <input type="text" id="form-title" name="form-title" class="form-control" ng-model="data.title"/>
+                    <input type="text" required id="form-title" name="form-title" class="form-control"
+                           ng-model="data.title"/>
                 </div>
                 <div class="form-group">
                     <label class="control-label" for="form-url">URL : </label>
-                    <input type="url" id="form-url" name="form-url" class="form-control" ng-model="data.url"/>
+                    <input type="url" required id="form-url" name="form-url" class="form-control" ng-model="data.url"/>
                 </div>
                 <div class="form-group">
                     <label class="control-label" for="form-content">説明(簡単に概要や要点をまとめる): </label>
-                    <textarea id="form-content" name="form-content" rows="5" class="form-control"
+                    <textarea required id="form-content" name="form-content" rows="5" class="form-control"
                               ng-model="data.content"></textarea>
 
                 </div>
@@ -49,7 +85,9 @@
                         </div>
                     </div>
                 </div>
-                <button type="button" class="btn btn-primary" ng-click="addNewRelatedSite()"><i class="glyphicon glyphicon-plus"></i>関連サイトを追加</button>
+                <button type="button" class="btn btn-primary" ng-click="addNewRelatedSite()"><i
+                        class="glyphicon glyphicon-plus"></i>関連サイトを追加
+                </button>
             </form>
         </div>
         <div class="col-md-4">
