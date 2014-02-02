@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<head>
+    <title></title>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/ng-tags-input/ng-tags-input.js"></script>
+    <script src="app/app.js"></script>
+    <link rel="stylesheet" type="text/css" href="bower_components/ng-tags-input/ng-tags-input.min.css">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="app/css/style.css">
+</head>
+<body>
+<div class="container">
+    <div class="row" ng-controller="dataFormController">
+        <h1><a href="https://github.com/azu/jser.info/">JSer.info</a> Contributing form</h1>
+
+        <div class="col-md-8">
+            <form role="form">
+                <div class="control">
+                    <label class="control-label" for="form-title">タイトル: </label>
+                    <input type="text" id="form-title" name="form-title" class="form-control" ng-model="data.title"/>
+                </div>
+                <div class="control">
+                    <label class="control-label" for="form-url">URL : </label>
+                    <input type="url" id="form-url" name="form-url" class="form-control" ng-model="data.url"/>
+                </div>
+                <div class="control">
+                    <label class="control-label" for="form-content">説明(簡単に概要や要点をまとめる): </label>
+                    <textarea id="form-content" name="form-content" rows="5" class="form-control"
+                              ng-model="data.content"></textarea>
+
+                </div>
+                <div class="control">
+                    <label for="form-tag" class="control-label">タグ(カンマ,区切り): </label>
+                    <tags-input id="form-tag" name="form-tag" ng-model="data.tags" custom-class="bootstrap"
+                                allowed-tags-pattern="^.*$"></tags-input>
+                </div>
+                <div class="control">
+                    <button type="submit" class="btn btn-default">サインイン</button>
+                </div>
+            </form>
+        </div>
+        <div class="col-md-4">
+            <div>
+                <label>
+                    <textarea rows="18" cols="50">{{data|json}}</textarea>
+                </label>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
