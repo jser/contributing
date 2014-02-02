@@ -6,9 +6,9 @@ module.exports = function (app) {
             url: "",
             content: "",
             tags: [],
-            relatedSites: [],
+            "related-links": [],
             insertNewRelatedSite: function () {
-                this.relatedSites.push({});
+                this["related-links"].push({});
             }
         }
     };

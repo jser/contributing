@@ -78,7 +78,7 @@
                                 allowed-tags-pattern="^.*$" min-length="1"></tags-input>
                 </div>
                 <div class="related-site-form-group">
-                    <div class="form-group related-site-form" data-ng-repeat="relatedSite in data.relatedSites">
+                    <div class="form-group related-site-form" data-ng-repeat="relatedSite in data['related-links']">
                         <div>
                             <label>タイトル</label>
                             <input type="text" class="form-control" required placeholder="関連サイトタイトル"
@@ -112,8 +112,8 @@
 
                 <div marked="markdown_render">
                 </div>
-                <ul ng-show="data.relatedSites.length > 0">
-                    <li data-ng-repeat="relatedSite in data.relatedSites"><a href="{{relatedSite.url}}" target="_blank">{{relatedSite.title}}</a>
+                <ul ng-show="data['related-links'].length > 0">
+                    <li data-ng-repeat="relatedSite in data['related-links']"><a href="{{relatedSite.url}}" target="_blank">{{relatedSite.title}}</a>
                     </li>
                 </ul>
             </div>
