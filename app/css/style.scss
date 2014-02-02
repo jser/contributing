@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .bootstrap .tags {
   background-color: #fff;
   border: 1px solid #ccc;
@@ -27,5 +28,16 @@
     background: transparent;
     color: #000;
     opacity: .4;
+  }
+}
+
+.related-site-form-group {
+  &:before {
+    content: '関連サイト';
+    font-size: 20px;
+    font-weight: bold;
+  }
+  .related-site-form {
+    padding-left: 1em;
   }
 }

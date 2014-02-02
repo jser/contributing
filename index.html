@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html ng-app="app">
 <head>
+    <link rel="stylesheet" type="text/css" href="app/css/style.scss"/>
     <title></title>
     <script src="bower_components/angular/angular.js"></script>
     <script src="bower_components/ng-tags-input/ng-tags-input.js"></script>
@@ -16,28 +17,40 @@
 
         <div class="col-md-8">
             <form role="form">
-                <div class="control">
+                <div class="form-group">
                     <label class="control-label" for="form-title">タイトル: </label>
                     <input type="text" id="form-title" name="form-title" class="form-control" ng-model="data.title"/>
                 </div>
-                <div class="control">
+                <div class="form-group">
                     <label class="control-label" for="form-url">URL : </label>
                     <input type="url" id="form-url" name="form-url" class="form-control" ng-model="data.url"/>
                 </div>
-                <div class="control">
+                <div class="form-group">
                     <label class="control-label" for="form-content">説明(簡単に概要や要点をまとめる): </label>
                     <textarea id="form-content" name="form-content" rows="5" class="form-control"
                               ng-model="data.content"></textarea>
 
                 </div>
-                <div class="control">
+                <div class="form-group">
                     <label for="form-tag" class="control-label">タグ(カンマ,区切り): </label>
                     <tags-input id="form-tag" name="form-tag" ng-model="data.tags" custom-class="bootstrap"
                                 allowed-tags-pattern="^.*$"></tags-input>
                 </div>
-                <div class="control">
-                    <button type="submit" class="btn btn-default">サインイン</button>
+                <div class="related-site-form-group">
+                    <div class="form-group related-site-form" data-ng-repeat="relatedSite in data.relatedSites">
+                        <div>
+                            <label ng-show="isShowLabel(relatedSite)">タイトル</label>
+                            <input type="text" class="form-control" required placeholder="関連サイトタイトル"
+                                   ng-model="relatedSite.title"/>
+                        </div>
+                        <div>
+                            <label ng-show="isShowLabel(relatedSite)">URL</label>
+                            <input type="url" class="form-control" required placeholder="関連サイトURL"
+                                   ng-model="relatedSite.url"/>
+                        </div>
+                    </div>
                 </div>
+                <button type="button" ng-click="addNewRelatedSite()">関連サイトを追加</button>
             </form>
         </div>
         <div class="col-md-4">
