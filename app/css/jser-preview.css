@@ -1,0 +1,38 @@
+/* tags */
+.jser-preview blockquote {
+  border-left: 1px #bababa solid;
+  color: #323232;
+  font-size: 13px;
+  margin: 2em 0 1px;
+  padding: 1px 10px;
+  text-shadow: #ffffff 0 1px 1px; }
+.jser-preview .jser-tag-mark {
+  display: none; }
+.jser-preview .jser-tag-paragraph {
+  padding-left: 20px;
+  background: url("http://static.tumblr.com/yv3nh5u/2tQmk5mzu/icon-tags.png") no-repeat left top; }
+.jser-preview .jser-tag {
+  color: #aaaaaa; }
+.jser-preview .jser-tags {
+  padding: 3px 0 0;
+  border-left: 1px #bababa solid;
+  /* | blockquote */
+  margin-bottom: 0.5em; }
+.jser-preview .jser-tag:after {
+  content: ","; }
+.jser-preview .jser-tag:last-child:after {
+  content: ""; }
+.jser-preview .jser-tags img {
+  margin-right: 5px;
+  vertical-align: middle; }
+.jser-preview .jser-tag-icon {
+  padding-left: 18px;
+  background-position: left center;
+  background-image: url("http://static.tumblr.com/yv3nh5u/2tQmk5mzu/icon-tags.png");
+  background-repeat: no-repeat; }
+.jser-preview .jser-sitelink strong {
+  font-size: 1em; }
+.jser-preview .site-genre {
+  margin: 1.5em 0;
+  padding-top: 10px;
+  border-top: 2px solid #14b4c8; }
