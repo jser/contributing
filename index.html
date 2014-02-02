@@ -4,10 +4,13 @@
     <title>JSer.info Contributing form</title>
     <script src="bower_components/angular/angular.js"></script>
     <script src="bower_components/ng-tags-input/ng-tags-input.js"></script>
+    <script src="bower_components/marked/lib/marked.js"></script>
+    <script src="bower_components/angular-marked/angular-marked.js"></script>
     <script src="app/app.js"></script>
     <link rel="stylesheet" type="text/css" href="bower_components/ng-tags-input/ng-tags-input.min.css">
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="app/css/style.css">
+    <link rel="stylesheet" href="app/css/jser-preview.css">
 </head>
 <body>
 <div class="container" ng-controller="jserController">
@@ -68,7 +71,7 @@
                 <div class="form-group">
                     <label for="form-tags" class="control-label">タグ(カンマ,区切り): </label>
                     <tags-input id="form-tags" name="form-tags" ng-model="data.tags" custom-class="bootstrap"
-                                allowed-tags-pattern="^.*$"></tags-input>
+                                allowed-tags-pattern="^.*$" min-length="1"></tags-input>
                 </div>
                 <div class="related-site-form-group">
                     <div class="form-group related-site-form" data-ng-repeat="relatedSite in data.relatedSites">
@@ -90,6 +93,27 @@
             </form>
         </div>
         <div class="col-md-4">
+            <div class="jser-preview">
+                <blockquote cite="{{data.url}}"
+                            title="{{data.title}}">
+                    <p class="jser-sitelink"><strong>{{data.title}}</strong></p>
+                    <footer><cite><a href="{{data.url}}"
+                                     title="{{data.title}}" target="_blank">{{data.title}}</a></cite>
+                    </footer>
+                </blockquote>
+
+                <p class="jser-tags jser-tag-icon" ng-show="data.tags.length > 0"><span class="jser-tag"
+                                                                                        data-ng-repeat="tag in data.tags">{{tag}}</span>
+                </p>
+
+                <div marked="markdown_render">
+                </div>
+                <ul ng-show="data.relatedSites.length > 0">
+                    <li data-ng-repeat="relatedSite in data.relatedSites"><a href="{{relatedSite.url}}" target="_blank">{{relatedSite.title}}</a>
+                    </li>
+                </ul>
+            </div>
+            <hr/>
             <div>
                 <label>
                     <textarea rows="18" cols="50">{{data|json}}</textarea>
