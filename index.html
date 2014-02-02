@@ -32,19 +32,19 @@
 
                 </div>
                 <div class="form-group">
-                    <label for="form-tag" class="control-label">タグ(カンマ,区切り): </label>
-                    <tags-input id="form-tag" name="form-tag" ng-model="data.tags" custom-class="bootstrap"
+                    <label for="form-tags" class="control-label">タグ(カンマ,区切り): </label>
+                    <tags-input id="form-tags" name="form-tags" ng-model="data.tags" custom-class="bootstrap"
                                 allowed-tags-pattern="^.*$"></tags-input>
                 </div>
                 <div class="related-site-form-group">
                     <div class="form-group related-site-form" data-ng-repeat="relatedSite in data.relatedSites">
                         <div>
-                            <label ng-show="isShowLabel(relatedSite)">タイトル</label>
+                            <label>タイトル</label>
                             <input type="text" class="form-control" required placeholder="関連サイトタイトル"
                                    ng-model="relatedSite.title"/>
                         </div>
                         <div>
-                            <label ng-show="isShowLabel(relatedSite)">URL</label>
+                            <label>URL</label>
                             <input type="url" class="form-control" required placeholder="関連サイトURL"
                                    ng-model="relatedSite.url"/>
                         </div>

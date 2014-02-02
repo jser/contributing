@@ -1,6 +1,16 @@
+"use strict";
 module.exports = function (app) {
-    app.service("dataFormModel", function () {
-        this.tags = ["JavaScript", "Angular"];
-        this.relatedSites = [];
-    });
+    var dataFormService = function () {
+        return {
+            title: "",
+            url: "",
+            content: "",
+            tags: [],
+            relatedSites: [],
+            insertNewRelatedSite: function () {
+                this.relatedSites.push({});
+            }
+        }
+    };
+    app.factory("dataFormModel", dataFormService);
 };

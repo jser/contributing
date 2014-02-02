@@ -1,0 +1,28 @@
+{
+  "name": "JSer.info-tribute",
+  "version": "0.0.0",
+  "description": "Contribute form for JSer.info",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/azu/JSer.info-tribute.git"
+  },
+  "keywords": [
+    "jser"
+  ],
+  "author": "azu",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/azu/JSer.info-tribute/issues"
+  },
+  "homepage": "https://github.com/azu/JSer.info-tribute",
+  "devDependencies": {
+    "browserify": "~3.24.9",
+    "gulp": "~3.5.0",
+    "connect": "~2.12.0",
+    "gulp-browserify": "~0.4.1"
+  }
+}
