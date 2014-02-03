@@ -5,12 +5,13 @@ module.exports = function (app) {
             title: "",
             url: "",
             content: "",
+            date: new Date(),
             tags: [],
             "related-links": [],
             insertNewRelatedSite: function () {
                 this["related-links"].push({});
             }
-        }
+        };
     };
     app.factory("dataFormModel", dataFormService);
 };
