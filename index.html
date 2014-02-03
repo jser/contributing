@@ -28,7 +28,9 @@
             <ul>
                 <li>関連サイト以外は大体必須項目となっています。</li>
                 <li>説明文はMarkdown又はHTMLが利用できます。</li>
-                <li>関連サイトは複数入力出来ますが、説明文を使っても問題ないです。</li>
+                <li>どのような内容を書くべきかは<a href="https://github.com/azu/jser.info/blob/gh-pages/CONTRIBUTING.md">Pull
+                    Requestガイド</a>を参照して下さい。
+                </li>
             </ul>
         </div>
         <div class="col-md-4">
@@ -78,6 +80,9 @@
                                 allowed-tags-pattern="^.*$" min-length="1"></tags-input>
                 </div>
                 <div class="related-site-form-group">
+                    <h3>関連サイト</h3>
+                    <p>関連するサイト(合わせて読みたい、言及してるサイト、ライブラリ等)をリストとして並べたい場合に利用して下さい。</p>
+
                     <div class="form-group related-site-form" data-ng-repeat="relatedSite in data['related-links']">
                         <div>
                             <label>タイトル</label>
@@ -113,7 +118,8 @@
                 <div marked="markdown_render">
                 </div>
                 <ul ng-show="data['related-links'].length > 0">
-                    <li data-ng-repeat="relatedSite in data['related-links']"><a href="{{relatedSite.url}}" target="_blank">{{relatedSite.title}}</a>
+                    <li data-ng-repeat="relatedSite in data['related-links']"><a href="{{relatedSite.url}}"
+                                                                                 target="_blank">{{relatedSite.title}}</a>
                     </li>
                 </ul>
             </div>
