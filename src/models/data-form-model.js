@@ -1,9 +1,10 @@
 "use strict";
 module.exports = function (app) {
-    var dataFormService = function () {
+    var dataFormService = function ($location) {
+        var query = $location.search();
         return {
-            title: "",
-            url: "",
+            title: query.title || "",
+            url: query.url || "",
             content: "",
             date: new Date(),
             tags: [],
