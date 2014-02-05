@@ -22,40 +22,51 @@
         </h1>
         <p class="lead"><a href="https://github.com/azu/jser.info">azu/jser.info</a>に載せたいサイトのpull requestを補助するサイト</p>
     </div>
-    <div class="row">
-        <div class="col-md-4">
-            <h2>1. サイト情報を入力</h2>
-            <ul>
-                <li>関連サイト以外は大体必須項目となっています。</li>
-                <li>説明文はMarkdown又はHTMLが利用できます。</li>
-                <li>どのような内容を書くべきかは<a href="https://github.com/azu/jser.info/blob/gh-pages/CONTRIBUTING.md">Pull
-                    Requestガイド</a>を参照して下さい。
-                </li>
-            </ul>
-        </div>
-        <div class="col-md-4">
-            <h2>2. JSONをコピーする</h2>
+    <tabs>
+        <pane title="Home">
+            <div class="col-md-4">
+                <h2>1. サイト情報を入力</h2>
+                <ul>
+                    <li>関連サイト以外は大体必須項目となっています。</li>
+                    <li>説明文はMarkdown又はHTMLが利用できます。</li>
+                    <li>どのような内容を書くべきかは<a href="https://github.com/azu/jser.info/blob/gh-pages/CONTRIBUTING.md">Pull
+                        Requestガイド</a>を参照して下さい。
+                    </li>
+                </ul>
+            </div>
+            <div class="col-md-4">
+                <h2>2. JSONをコピーする</h2>
 
-            <p>右側に表示されているJSON文字列をコピーしましょう。</p>
+                <p>右側に表示されているJSON文字列をコピーしましょう。</p>
 
-            <p>データはJSONとして追記していくため、この文字列をpull requestで追加します。</p>
-            <iframe border="0" frameborder="0" height="130" src="http://let.st-hatelabo.com/efcl/let.iframe?embed=1&code_id=hJmdgKOVlstQ" width="500"></iframe>
+                <p>データはJSONとして追記していくため、この文字列をpull requestで追加します。</p>
+            </div>
+            <div class="col-md-4">
+                <h2>3. Pull Request</h2>
 
-        </div>
-        <div class="col-md-4">
-            <h2>3. Pull Request</h2>
+                <p><a href="https://github.com/azu/jser.info">JSer.infoリポジトリ</a>の<a
+                        href="https://github.com/azu/jser.info/edit/gh-pages/data/{{today | date:'yyyy/MM'}}/index.json">{{today
+                    | date:'yyyy/MM'}}/index.json</a>の"list"配列の末尾にJSON文字列を追記し、pull requestしましょう。(カンマを忘れずにね!)
+                </p>
 
-            <p><a href="https://github.com/azu/jser.info">JSer.infoリポジトリ</a>の<a
-                    href="https://github.com/azu/jser.info/edit/gh-pages/data/{{today | date:'yyyy/MM'}}/index.json">{{today
-                | date:'yyyy/MM'}}/index.json</a>の"list"配列の末尾にJSON文字列を追記し、pull requestしましょう。(カンマを忘れずにね!)
-            </p>
-
-            <p>
-                <a href="https://github.com/azu/jser.info/edit/gh-pages/data/{{today | date:'yyyy/MM'}}/index.json"
-                   class="btn btn-success"><i class="glyphicon glyphicon-edit"></i>Pull Request</a>
-            </p>
-        </div>
-    </div>
+                <p>
+                    <a href="https://github.com/azu/jser.info/edit/gh-pages/data/{{today | date:'yyyy/MM'}}/index.json"
+                       class="btn btn-success"><i class="glyphicon glyphicon-edit"></i>Pull Request</a>
+                </p>
+            </div>
+        </pane>
+        <pane title="ブックマークレット">
+            <div class="col-md-4">
+                <h3><i class="glyphicon glyphicon-bookmark"></i>登録用ブックマークレット</h3>
+                <p>登録したいサイトでブックマークレットを実行するとサイトタイトルとURLを入力済みで開けます。</p>
+            </div>
+            <div class="col-md-4">
+                <iframe border="0" frameborder="0" height="130"
+                        src="http://let.st-hatelabo.com/efcl/let.iframe?embed=1&code_id=hJmdgKOVlstQ"
+                        width="500"></iframe>
+            </div>
+        </pane>
+    </tabs>
 </div>
 <div class="container">
     <div class="row" ng-controller="dataFormController">
@@ -83,11 +94,12 @@
                 </div>
                 <div class="related-site-form-group">
                     <h3>関連サイト</h3>
+
                     <p>関連するサイト(合わせて読みたい、言及してるサイト、ライブラリ等)をリストとして並べたい場合に利用して下さい。</p>
 
                     <div class="form-group related-site-form" data-ng-repeat="relatedSite in data['related-links']">
                         <div>
-                            <label>タイトル</label>
+                            <label>サイトタイトル</label>
                             <input type="text" class="form-control" required placeholder="関連サイトタイトル"
                                    ng-model="relatedSite.title"/>
                         </div>
