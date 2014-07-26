@@ -1,6 +1,6 @@
 # JSer.info-tribute
 
-[azu/jser.info](https://github.com/azu/jser.info "azu/jser.info") に対して載せたいサイト等のpull requestを補助するサイトです。
+[jser/JSer.info](https://github.com/jser/JSer.info "jser/JSer.info") に対して載せたいサイト等のpull requestを補助するサイトです。
 
 以下から利用できます。
 
@@ -11,7 +11,7 @@
 
 1. [JSer.info Contributing form](http://azu.github.io/JSer.info-tribute/ "JSer.info Contributing form")にアクセス
 2. 紹介したいサイトの情報を入力する
-4. [azu/jser.info](https://github.com/azu/jser.info "azu/jser.info") のデータに追記する
+4. [jser/JSer.info](https://github.com/jser/JSer.info "jser/JSer.info") のデータに追記する
 5. pull requestする
 
 ### Parameter

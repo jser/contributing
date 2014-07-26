@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/azu/JSer.info-tribute.git"
+    "url": "git://github.com/jser/JSer.info-tribute.git"
   },
   "keywords": [
     "jser"
@@ -16,9 +16,9 @@
   "author": "azu",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/azu/JSer.info-tribute/issues"
+    "url": "https://github.com/jser/JSer.info-tribute/issues"
   },
-  "homepage": "https://github.com/azu/JSer.info-tribute",
+  "homepage": "https://github.com/jser/JSer.info-tribute",
   "devDependencies": {
     "browserify": "~3.24.9",
     "gulp": "~3.5.0",
