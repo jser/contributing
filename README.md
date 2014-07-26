@@ -4,12 +4,11 @@
 
 以下から利用できます。
 
-* [JSer.info Contributing form](http://azu.github.io/JSer.info-tribute/ "JSer.info Contributing form")
-
+* [JSer.info Contributing form](http://jser.github.io/JSer.info-tribute/ "JSer.info Contributing form")
 
 ## Usage
 
-1. [JSer.info Contributing form](http://azu.github.io/JSer.info-tribute/ "JSer.info Contributing form")にアクセス
+1. [JSer.info Contributing form](http://jser.github.io/JSer.info-tribute/ "JSer.info Contributing form")にアクセス
 2. 紹介したいサイトの情報を入力する
 4. [jser/JSer.info](https://github.com/jser/JSer.info "jser/JSer.info") のデータに追記する
 5. pull requestする
@@ -18,7 +17,7 @@
 
 URLの含まれる特定のクエリと入力項目は対応しているため、
 
-`http://azu.github.io/JSer.info-tribute/?title=TEST&url=http://example.com&content=content&tags=javascript,library`
+`http://jser.github.io/JSer.info-tribute/?title=TEST&url=http://example.com&content=content&tags=javascript,library`
 
 のようなURLにアクセスする事で、項目を入力した状態で開くことが出来ます。
 
