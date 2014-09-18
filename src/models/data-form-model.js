@@ -13,9 +13,9 @@ module.exports = function (app) {
             content: query.content || "",
             date: new Date(),
             tags: query.tags ? splitTags(query.tags): [],
-            "related-links": [],
+            "relatedLinks": [],
             insertNewRelatedSite: function () {
-                this["related-links"].push({});
+                this["relatedLinks"].push({});
             }
         };
     };
