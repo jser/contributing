@@ -4,7 +4,8 @@
   "description": "Contribute form for JSer.info",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "browserify src/app.js -o app/app.js",
+    "watch": "watchify --debug src/app.js -o app/app.js"
   },
   "repository": {
     "type": "git",
@@ -20,9 +21,7 @@
   },
   "homepage": "https://github.com/jser/JSer.info-tribute",
   "devDependencies": {
-    "browserify": "~3.24.9",
-    "gulp": "~3.5.0",
-    "connect": "~2.12.0",
-    "gulp-browserify": "~0.4.1"
+    "browserify": "^10.1.0",
+    "watchify": "^3.2.1"
   }
 }

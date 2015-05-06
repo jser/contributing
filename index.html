@@ -130,7 +130,7 @@
 
                 <div marked="markdown_render">
                 </div>
-                <ul ng-show="data['related-links'].length > 0">
+                <ul ng-show="data['related-links'].length >= 0">
                     <li data-ng-repeat="relatedSite in data['related-links']"><a href="{{relatedSite.url}}"
                                                                                  target="_blank">{{relatedSite.title}}</a>
                     </li>
