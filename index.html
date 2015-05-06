@@ -96,7 +96,7 @@
 
                     <p>関連するサイト(合わせて読みたい、言及してるサイト、ライブラリ等)をリストとして並べたい場合に利用して下さい。</p>
 
-                    <div class="form-group related-site-form" data-ng-repeat="relatedSite in data['related-links']">
+                    <div class="form-group related-site-form" data-ng-repeat="relatedSite in data['relatedLinks']">
                         <div>
                             <label>サイトタイトル</label>
                             <input type="text" class="form-control" required placeholder="関連サイトタイトル"
@@ -130,7 +130,7 @@
 
                 <div marked="markdown_render">
                 </div>
-                <ul ng-show="data['related-links'].length >= 0">
+                <ul ng-show="data['related-links'].length > 0">
                     <li data-ng-repeat="relatedSite in data['related-links']"><a href="{{relatedSite.url}}"
                                                                                  target="_blank">{{relatedSite.title}}</a>
                     </li>
