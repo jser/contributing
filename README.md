@@ -2,7 +2,7 @@
 
 [jser/JSer.info](https://github.com/jser/JSer.info "jser/JSer.info") に対して載せたいサイト等のpull requestを補助するサイトです。
 
-以下から利用できます。
+以下からサイトへアクセスできます。
 
 * [JSer.info Contributing form](http://jser.info/JSer.info-tribute/ "JSer.info Contributing form")
 
