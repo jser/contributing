@@ -1,14 +1,14 @@
-# JSer.info-tribute
+# jser/contributing
 
-[jser/JSer.info](https://github.com/jser/JSer.info "jser/JSer.info") に対して載せたいサイト等のpull requestを補助するサイトです。
+[jser/JSer.info](https://github.com/jser/JSer.info "jser/JSer.info") に対して載せたいサイト等のPull Requestを補助するサイトです。
 
 以下からサイトへアクセスできます。
 
-* [JSer.info Contributing form](http://jser.info/JSer.info-tribute/ "JSer.info Contributing form")
+* [JSer.info Contributing form](http://jser.info/contributing/ "JSer.info Contributing form")
 
 ## Usage
 
-1. [JSer.info Contributing form](http://jser.info/JSer.info-tribute/ "JSer.info Contributing form")にアクセス
+1. [JSer.info Contributing form](http://jser.info/contributing/ "JSer.info Contributing form")にアクセス
 2. 紹介したいサイトの情報を入力する
 4. [jser/JSer.info](https://github.com/jser/JSer.info "jser/JSer.info") のデータに追記する
 5. pull requestする
@@ -17,7 +17,7 @@
 
 URLの含まれる特定のクエリと入力項目は対応しているため、
 
-`http://jser.info/JSer.info-tribute/?title=TEST&url=http://example.com&content=content&tags=javascript,library`
+`http://jser.info/contributing/?title=TEST&url=http://example.com&content=content&tags=javascript,library`
 
 のようなURLにアクセスする事で、項目を入力した状態で開くことが出来ます。
 

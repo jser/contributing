@@ -1,5 +1,5 @@
 {
-  "name": "JSer.info-tribute",
+  "name": "contributing",
   "version": "0.0.0",
   "description": "Contribute form for JSer.info",
   "main": "index.js",
@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/jser/JSer.info-tribute.git"
+    "url": "git://github.com/jser/contributing.git"
   },
   "keywords": [
     "jser"
@@ -17,9 +17,9 @@
   "author": "azu",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/jser/JSer.info-tribute/issues"
+    "url": "https://github.com/jser/contributing/issues"
   },
-  "homepage": "https://github.com/jser/JSer.info-tribute",
+  "homepage": "https://github.com/jser/contributing",
   "devDependencies": {
     "browserify": "^10.1.0",
     "watchify": "^3.2.1"
