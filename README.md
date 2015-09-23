@@ -1,6 +1,6 @@
 # jser/contributing
 
-[jser/JSer.info](https://github.com/jser/JSer.info "jser/JSer.info") に対して載せたいサイト等のPull Requestを補助するサイトです。
+[jser/JSer.info](https://github.com/jser/JSer.info "jser/JSer.info") に対して載せたいURLのPull Requestを補助するツールです。
 
 以下からサイトへアクセスできます。
 
@@ -11,9 +11,9 @@
 1. [JSer.info Contributing form](http://jser.info/contributing/ "JSer.info Contributing form")にアクセス
 2. 紹介したいサイトの情報を入力する
 4. [jser/JSer.info](https://github.com/jser/JSer.info "jser/JSer.info") のデータに追記する
-5. pull requestする
+5. Pull Requestする
 
-### Parameter
+### ブックマークレット
 
 URLの含まれる特定のクエリと入力項目は対応しているため、
 

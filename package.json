@@ -1,7 +1,7 @@
 {
   "name": "contributing",
   "version": "0.0.0",
-  "description": "Contribute form for JSer.info",
+  "description": "Contributing form for JSer.info",
   "main": "index.js",
   "scripts": {
     "build": "browserify src/app.js -o app/app.js",
